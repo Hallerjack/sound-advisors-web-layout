@@ -7,49 +7,62 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles_home.css">
-    <title>Sound Advisors</title>
+    <title>Sound Advisors - Product Gallery</title>
+    
 </head>
 <body>
-    <!-- HERO --> 
-    <header class="main-hero">
-        <div class="hero-1 align-text">
-            <small>Lanzamiento</small>
-            <h1>JBL MA9100HP</h1>
-            <p>Una nueva experiencia en audio</p>
-            <button class="main-btn">Ver más</button>
+    
+    <!-- PRODUCT SECTION -->
+    <div class="products-section">
+
+        <!-- FILTERS -->
+        <div class="products-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="receiver">Receiver</button>
+            <button class="filter-btn" data-filter="amps">Amps</button>
+            <button class="filter-btn" data-filter="parlantes">Parlantes</button>
+            <button class="filter-btn" data-filter="wireless">Wireless</button>
         </div>
-        <div class="hero-2 align-text">
-            <small>Lanzamiento</small>
-            <h1>JBL MA9100HP</h1>
-            <p>Una nueva experiencia en audio</p>
-            <button class="second-btn">Ver más</button>
+
+        <!-- GRID -->
+        <div class="products-grid">
+
+            <div class="product-card" data-category="receiver">
+                [product id="123"]
+            </div>
+
         </div>
-        <div class="hero-3 align-text">
-            <small>Lanzamiento</small>
-            <h1>JBL MA9100HP</h1>
-            <p>Una nueva experiencia en audio</p>
-            <button class="second-btn">Ver más</button>
-        </div>
-    </header>
+    </div>
 
-    <main>
-        <section class="highlights"></section>
-            <h1>Esto es una prueba</h1>
-        <section class="products"></section>
+    <!-- SCRIPT -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".filter-btn");
+        const cards = document.querySelectorAll(".product-card");
 
-        <section class="categories"></section>
+        buttons.forEach(btn => {
+            btn.addEventListener("click", () => {
 
-        <section class="info"></section>
+            // Active state
+            buttons.forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
 
-        <section class="last-news"></section>
+            const filter = btn.dataset.filter;
 
-        <section class="newsletter"></section>
+            cards.forEach(card => {
+                const categories = card.dataset.category;
 
+                if (filter === "all" || categories.includes(filter)) {
+                card.classList.remove("hidden");
+                } else {
+                card.classList.add("hidden");
+                }
+            });
 
-    </main>
+            });
+        });
+        });
+    </script>
 
-    <footer>
-
-    </footer>
 </body>
 </html>
