@@ -11,11 +11,17 @@ body {
 
 /* --- PRODUCTS HOME SECTION --- */
 
+.main-prod-grid {
+
+}
+
 .products-section {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    padding: 2em 5em;
+    height: auto;
+    width: 100%;
+    padding: 3em 3em 3em 3em;
 }
 
 /* --- FILTERS --- */
@@ -47,7 +53,7 @@ body {
 
 .products-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   row-gap: 40px;
   column-gap: 20px;
 }
@@ -73,10 +79,6 @@ body {
 
 .product-card.hidden {
     display: none;
-    transition: 0.3s;
-/*    opacity: 0;
-    pointer-events: none;
-    transform: scale(.96); */
 }
 
 .img-prod-card {
@@ -125,10 +127,9 @@ body {
 }
 
 
-/* 
 
+
+/*
 .box {
     border: solid 1px red;
 }
-
-*/

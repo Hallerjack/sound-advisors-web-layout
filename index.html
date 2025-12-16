@@ -13,133 +13,136 @@
 <body>
 
     <!-- PRODUCT SECTION -->
-    <div class="products-section">
-        
-        <div class="cards-block">
 
-            <!-- FILTERS -->
-            <div class="products-filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="receiver">Receiver</button>
-                <button class="filter-btn" data-filter="homecinema">Home Cinema<l/button>
-                <button class="filter-btn" data-filter="parlantes">Parlantes</button>
-                <button class="filter-btn" data-filter="wireless">Wireless</button>
-            </div>
-            
-            <!-- GRID -->
-            <div class="products-grid">
-                
-                <div class="product-card box" data-category="receiver">
-                    <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2025/12/LS_JBL_MA9100HPWHT_Feature-1_904x560.webp" alt="">
-                    <div class="text-prod-card">
-                        <h2>JBL MA9100 HP</h2>
-                        <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
-                        <h3>$1.199.990</h3>
-                    </div>
-                    <div class="btns-prod-card">
-                        <button class="btn-card-1">Ver más</button>
-                        <button class="btn-card-2">Añadir al carrito</button>
-                    </div>
-                </div>
-                
-                <div class="product-card box" data-category="homecinema">
-                    <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2025/08/klipschr40sa_content5.webp" alt="">
-                    <div class="text-prod-card">
-                        <h2>Klipsch: M123 Sit amet</h2>
-                        <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
-                        <h3>$1.199.990</h3>
-                    </div>
-                    <div class="btns-prod-card">
-                        <button class="btn-card-1">Ver más</button>
-                        <button class="btn-card-2">Añadir al carrito</button>
-                    </div>
-                </div>
+    <div class="main-prod-grid">
 
-                <div class="product-card box" data-category="parlantes">
-                    <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2025/08/1700237234807-MKCYPKBNGF-1-5.webp" alt="">
-                    <div class="text-prod-card">
-                        <h2>JAMO: S-807</h2>
-                        <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
-                        <h3>$1.199.990</h3>
-                    </div>
-                    <div class="btns-prod-card">
-                        <button class="btn-card-1">Ver más</button>
-                        <button class="btn-card-2">Añadir al carrito</button>
-                    </div>
-                </div>
-                
-                <div class="product-card box" data-category="parlantes">
-                    <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2023/05/SoundAdvisorsSONOSAccesoriosBannerIMG-scaled.jpg" alt="">
-                    <div class="text-prod-card">
-                        <h2>Sonos: KN231</h2>
-                        <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
-                        <h3>$1.199.990</h3>
-                    </div>
-                    <div class="btns-prod-card">
-                        <button class="btn-card-1">Ver más</button>
-                        <button class="btn-card-2">Añadir al carrito</button>
-                    </div>
-                </div>
-                
-                <div class="product-card box" data-category="parlantes">
-                    <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2022/08/SoundAdvisorsSONOSAmpBannerIMG-scaled.jpg" alt="">
-                    <div class="text-prod-card">
-                        <h2>Sonos: AMP 1234</h2>
-                        <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
-                        <h3>$1.199.990</h3>
-                    </div>
-                    <div class="btns-prod-card">
-                        <button class="btn-card-1">Ver más</button>
-                        <button class="btn-card-2">Añadir al carrito</button>
-                    </div>
-                </div>
-                
-                <div class="product-card box" data-category="parlantes">
-                    <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2022/08/SoundAdvisorsParlanteActivoAudioProA36ProductIMG_3.jpg" alt="">
-                    <div class="text-prod-card">
-                        <h2>JBL: Pro A36</h2>
-                        <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
-                        <h3>$1.199.990</h3>
-                    </div>
-                    <div class="btns-prod-card">
-                        <button class="btn-card-1">Ver más</button>
-                        <button class="btn-card-2">Añadir al carrito</button>
-                    </div>
-                </div>
-                
-            </div>
+        <div class="products-section box">
             
-            <!-- SCRIPT -->
-            <script>
-                document.addEventListener("DOMContentLoaded", function () {
-                    const buttons = document.querySelectorAll(".filter-btn");
-                    const cards = document.querySelectorAll(".product-card");
+            <div class="cards-block">
+
+                <!-- FILTERS -->
+                <div class="products-filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="receiver">Receiver</button>
+                    <button class="filter-btn" data-filter="homecinema">Home Cinema<l/button>
+                    <button class="filter-btn" data-filter="parlantes">Parlantes</button>
+                    <button class="filter-btn" data-filter="wireless">Wireless</button>
+                </div>
+                
+                <!-- GRID -->
+                <div class="products-grid">
                     
-                    buttons.forEach(btn => {
-                        btn.addEventListener("click", () => {
-                            
-                            // Active state
-                            buttons.forEach(b => b.classList.remove("active"));
-                            btn.classList.add("active");
-                            
-                            const filter = btn.dataset.filter;
-                            
-                            cards.forEach(card => {
-                                const categories = card.dataset.category;
+                    <div class="product-card box" data-category="receiver">
+                        <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2025/12/LS_JBL_MA9100HPWHT_Feature-1_904x560.webp" alt="">
+                        <div class="text-prod-card">
+                            <h2>JBL MA9100 HP</h2>
+                            <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
+                            <h3>$1.199.990</h3>
+                        </div>
+                        <div class="btns-prod-card">
+                            <button class="btn-card-1">Ver más</button>
+                            <button class="btn-card-2">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card box" data-category="homecinema">
+                        <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2025/08/klipschr40sa_content5.webp" alt="">
+                        <div class="text-prod-card">
+                            <h2>Klipsch: M123 Sit amet</h2>
+                            <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
+                            <h3>$1.199.990</h3>
+                        </div>
+                        <div class="btns-prod-card">
+                            <button class="btn-card-1">Ver más</button>
+                            <button class="btn-card-2">Añadir al carrito</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card box" data-category="parlantes">
+                        <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2025/08/1700237234807-MKCYPKBNGF-1-5.webp" alt="">
+                        <div class="text-prod-card">
+                            <h2>JAMO: S-807</h2>
+                            <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
+                            <h3>$1.199.990</h3>
+                        </div>
+                        <div class="btns-prod-card">
+                            <button class="btn-card-1">Ver más</button>
+                            <button class="btn-card-2">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card box" data-category="parlantes">
+                        <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2023/05/SoundAdvisorsSONOSAccesoriosBannerIMG-scaled.jpg" alt="">
+                        <div class="text-prod-card">
+                            <h2>Sonos: KN231</h2>
+                            <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
+                            <h3>$1.199.990</h3>
+                        </div>
+                        <div class="btns-prod-card">
+                            <button class="btn-card-1">Ver más</button>
+                            <button class="btn-card-2">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card box" data-category="parlantes">
+                        <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2022/08/SoundAdvisorsSONOSAmpBannerIMG-scaled.jpg" alt="">
+                        <div class="text-prod-card">
+                            <h2>Sonos: AMP 1234</h2>
+                            <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
+                            <h3>$1.199.990</h3>
+                        </div>
+                        <div class="btns-prod-card">
+                            <button class="btn-card-1">Ver más</button>
+                            <button class="btn-card-2">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-card box" data-category="parlantes">
+                        <img class="img-prod-card" src="https://www.soundadvisors.cl/wp-content/uploads/2022/08/SoundAdvisorsParlanteActivoAudioProA36ProductIMG_3.jpg" alt="">
+                        <div class="text-prod-card">
+                            <h2>JBL: Pro A36</h2>
+                            <p>consectetur adipisicing elit. Ducimus nulla natus sequi molestiae optio.</p>
+                            <h3>$1.199.990</h3>
+                        </div>
+                        <div class="btns-prod-card">
+                            <button class="btn-card-1">Ver más</button>
+                            <button class="btn-card-2">Añadir al carrito</button>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- SCRIPT -->
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const buttons = document.querySelectorAll(".filter-btn");
+                        const cards = document.querySelectorAll(".product-card");
+                        
+                        buttons.forEach(btn => {
+                            btn.addEventListener("click", () => {
                                 
-                                if (filter === "all" || categories.includes(filter)) {
-                                    card.classList.remove("hidden");
-                                } else {
-                                    card.classList.add("hidden");
-                                }
+                                // Active state
+                                buttons.forEach(b => b.classList.remove("active"));
+                                btn.classList.add("active");
+                                
+                                const filter = btn.dataset.filter;
+                                
+                                cards.forEach(card => {
+                                    const categories = card.dataset.category;
+                                    
+                                    if (filter === "all" || categories.includes(filter)) {
+                                        card.classList.remove("hidden");
+                                    } else {
+                                        card.classList.add("hidden");
+                                    }
+                                });
+                                
                             });
-                            
                         });
                     });
-                });
                 </script>
             </div>
+        </div>
     </div>
-    
 </body>
 </html>
