@@ -24,6 +24,13 @@ body {
     padding: 3em 3em 3em 3em;
 }
 
+/* --- TITLE --- */
+
+.cards-block h1 {
+    font-size: 3em;
+    margin-bottom: 1em;
+ }
+
 /* --- FILTERS --- */
 
 .products-filters {
